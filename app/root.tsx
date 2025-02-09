@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  Link
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
@@ -32,6 +33,22 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <header>
+          <nav>
+            <Link to="/">home</Link>
+            &nbsp;|&nbsp;
+            링크
+          </nav>
+          <hr/>
+          <nav>
+            <Link to="/auth/signin">로그인</Link>
+            &nbsp;|&nbsp;
+            <Link to="/auth/signup">회원가입</Link>
+            &nbsp;|&nbsp;
+            <Link to="/auth/signout">로그아웃</Link>
+          </nav>
+          <hr/>
+        </header>
         {children}
         <ScrollRestoration />
         <Scripts />
