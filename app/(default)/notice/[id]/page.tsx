@@ -1,10 +1,6 @@
 import { MetaData } from "@/components/metaData";
 
-export default async function NoticePage({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
+export default async function NoticePage({ params }: { params: Promise<{ id: string }>}) {
     const id = (await params).id
     return (
         <div>
