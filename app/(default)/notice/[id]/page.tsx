@@ -1,7 +1,9 @@
+import { MetaData } from "@/components/metaData";
+
 export default function NoticePage() {
     return (
         <div>
-            <title>hi</title>
+            <MetaData title="공지"/>
             공지상세
         </div>
     )
