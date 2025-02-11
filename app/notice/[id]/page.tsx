@@ -5,7 +5,7 @@ export default async function NoticePage({ params }: { params: Promise<{ id: str
     return (
         <div>
             <MetaData title={id}/>
-            공지상세
+            <h1 className="text-xl">{id}</h1>
         </div>
     )
 }
