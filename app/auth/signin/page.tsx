@@ -1,5 +1,5 @@
 import { SignInForm } from "@/components/form/signin"
-import { MetaData } from "@/components/metadata";
+import { MetaData } from "@/components/metaData";
 import { getSession } from "@/lib/session";
 import { redirect } from "next/navigation";
 

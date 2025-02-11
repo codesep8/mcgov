@@ -1,5 +1,5 @@
 import { SignOutForm } from "@/components/form/signout"
-import { MetaData } from "@/components/metadata";
+import { MetaData } from "@/components/metaData";
 import { getSession } from "@/lib/session";
 import { redirect } from "next/navigation";
 

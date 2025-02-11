@@ -1,4 +1,4 @@
-import { MetaData } from "@/components/metadata";
+import { MetaData } from "@/components/metaData";
 
 export default function DepositPage() {
     return (
