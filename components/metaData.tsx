@@ -4,13 +4,14 @@ interface MetaTagProps {
 }
 
 export function MetaData(props: MetaTagProps) {
+  const title = `${props.title} | ${process.env.SITE_NAME}`
   return (
     <>
-        <title>{(props.title && `${props.title} | Iodine`) || "Iodine"}</title>
-        <meta property="og:title" content={(props.title && `${props.title} | Iodine`) || "Iodine"} />
-        <meta property="og:site_name" content="Iodine" />
-        <meta name="description" content={props.description || "Iodine의 공식 웹페이지입니다."}/>
-        <meta property="og:description" content={props.description || "Iodine의 공식 웹페이지입니다."} />
+        <title>{(props.title && title) || process.env.SITE_NAME}</title>
+        <meta property="og:title" content={(props.title && title) || process.env.SITE_NAME} />
+        <meta property="og:site_name" content={process.env.SITE_NAME} />
+        <meta name="description" content={props.description || process.env.SITE_DESC}/>
+        <meta property="og:description" content={props.description || process.env.SITE_DESC} />
     </>
   );
 }

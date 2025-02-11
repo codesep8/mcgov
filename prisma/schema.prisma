@@ -35,3 +35,11 @@ model logs {
   amount Int
   created_at DateTime @default(now())
 }
+
+model Notices {
+  id Int @id @default(autoincrement())
+  title String
+  content String
+  user String
+  created_at DateTime @default(now())
+}
