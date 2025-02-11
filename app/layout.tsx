@@ -4,6 +4,7 @@ import { Announcement } from "@/components/layout/announcement";
 import { PrelineScript } from "@/components/providers/preline";
 import { Header } from "@/components/layout/header";
 import "./globals.css";
+import { ProgressBarProvider } from "@/components/providers/progress";
 
 const IBMPlexSansKR = IBM_Plex_Sans_KR({
   weight: ['600', '500'],
@@ -16,13 +17,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="kr" suppressHydrationWarning>
       <body className={`${IBMPlexSansKR.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-          <Announcement />
-          <main className="p-4">
-            {children}
-          </main>
+          <ProgressBarProvider>
+            <Header />
+            <Announcement />
+            <main className="p-4">
+              {children}
+            </main>
+          </ProgressBarProvider>
         </ThemeProvider>
-        <PrelineScript/>
       </body>
     </html>
   );
