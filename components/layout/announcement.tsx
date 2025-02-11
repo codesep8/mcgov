@@ -15,9 +15,9 @@ const getNotice = unstable_cache(
 async function Fetcher() {
   const data = await getNotice();
   if (!data) {
-    return <><Link href="/notice" className="underline">notice</Link> 에서 공지를 등록하십시오.</>
+    return <><Link href="/notice/new" className="underline">notice</Link> 에서 공지를 등록하십시오.</>
   }
-  return <>{data.title}</>
+  return <Link href={`/notice/${data?.id}`}>{data.title}</Link>
 }
 
 export function Announcement() {

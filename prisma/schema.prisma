@@ -41,5 +41,6 @@ model Notices {
   title String
   content String
   user String
+  user_name String
   created_at DateTime @default(now())
 }
