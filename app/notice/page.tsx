@@ -29,7 +29,7 @@ export default async function NoticePage({ searchParams }: { searchParams: Promi
     return (
         <div>
             <MetaData title="공지"/>
-            {notices.map((notice) => (
+            {data.map((notice) => (
                     <li key={notice.id}>{notice.title}</li>
             ))}
         </div>
