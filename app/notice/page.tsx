@@ -17,8 +17,8 @@ const getNoticeList = unstable_cache(
 
 export default async function NoticePage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }>}) {
     const rawId = (await searchParams).page
-    if (isNaN(rawId)) {
-        return notFound()
+    if (!rawId || Array.isArray(rawId) || Number.isNaN(Number(rawId))) {
+        return notFound();
     }
     const id = Number(rawId)
     const data = await getNotice(id);
