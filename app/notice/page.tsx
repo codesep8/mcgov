@@ -21,10 +21,9 @@ export default async function NoticePage({ searchParams }: { searchParams: Promi
         return notFound();
     }
     const id = Number(rawId)
-    const data = await getNotice(id);
-
-    if (!data) {
-        return notFound()
+    const data = await getNoticeList(id);
+    if (!data || data.length === 0) {
+        return notFound();
     }
     
     return (
