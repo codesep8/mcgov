@@ -8,7 +8,7 @@ export function GET(req: Request) {
         });
 }
 
-export function getHost(req?: { headers?: { host?: string } }) {
+function getHost(req?: { headers?: { host?: string } }) {
     if (typeof window !== "undefined") {
         // 클라이언트에서 실행되는 경우
         return window.location.origin;
