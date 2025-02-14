@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { getHost } from "@/lib/getHost";
 
 export function GET(req: Request) {
     const host = getHost({ headers: Object.fromEntries(req.headers) });
